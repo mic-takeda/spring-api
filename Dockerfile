@@ -3,6 +3,7 @@
 #
 FROM amazoncorretto:17 AS builder
 ARG WORKDIR
+
 ENV HOME=/${WORKDIR} \
     LANG=C.UTF-8 \
     TZ=Asia/Tokyo \
