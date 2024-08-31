@@ -26,6 +26,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      target: builder
       args:
         WORKDIR: ${WORKDIR}
     container_name: share-favplace-api
