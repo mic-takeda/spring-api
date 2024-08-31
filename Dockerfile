@@ -20,6 +20,6 @@ ENV HOME=${WORKDIR} \
     LANG=C.UTF-8 \
     TZ=Asia/Tokyo \
     HOST=0.0.0.0
-COPY --from=builder ${HOME}/build/libs/share-favplace-api-0.0.1-SNAPSHOT.war share-favplace-api.war
+COPY --from=builder ${HOME}/build/libs/demo-0.0.1-SNAPSHOT demo-0.0.1-SNAPSHOT
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","share-favplace-api.war"]
+ENTRYPOINT ["java","-jar","demo-0.0.1-SNAPSHOT"]
