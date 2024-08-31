@@ -3,12 +3,14 @@
 #
 FROM amazoncorretto:17 AS builder
 ARG WORKDIR
+
 ENV HOME=/${WORKDIR} \
     LANG=C.UTF-8 \
     TZ=Asia/Tokyo \
     HOST=0.0.0.0
 WORKDIR ${HOME}
 COPY ./ ${HOME}
+RUN chmod +x gradlew   # gradlew に実行権限を付与
 RUN ./gradlew build
 #
 # Package stage
